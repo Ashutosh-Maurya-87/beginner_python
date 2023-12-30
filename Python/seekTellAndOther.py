@@ -44,3 +44,7 @@ with open('test.txt', 'r') as f:
 
 
 # truncate function ---
+    '''when we open the file in the python by using open function, we can specify the mode in which mode
+    we want to open the file. If we specify the mode as 'w' or 'a' the file is opend in write mode and we can
+    write to the file 
+    '''
