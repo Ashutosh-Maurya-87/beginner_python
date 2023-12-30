@@ -1,0 +1,1 @@
+this is written from write mode in the file,this is append in the filethis is inside of the with, and append in the last of the filethis is inside of the with, and append in the last of the file
