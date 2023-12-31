@@ -51,9 +51,14 @@ print('fact is',fact(4))
 f = lambda a: 1 if a ==0 or a ==1 else a*f(a-1)
 print('factorial using lambda expression',f(5)), '''factorial using lambda expression 120'''
 
+# pass function as an argument to the function
 
+def fun(fn,val):
+    return val + fn(val)
 
+cube = lambda num: num*num*num
 
+print(fun(cube, 5)); '''130'''
 
 
 

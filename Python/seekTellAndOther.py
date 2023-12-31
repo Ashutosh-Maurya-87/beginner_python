@@ -43,8 +43,23 @@ with open('test.txt', 'r') as f:
     print(data); '''ashum'''
 
 
-# truncate function ---
+# truncate (छाँट कर छोटा करना) function ---
     '''when we open the file in the python by using open function, we can specify the mode in which mode
     we want to open the file. If we specify the mode as 'w' or 'a' the file is opend in write mode and we can
-    write to the file 
+    write to the file . However we want to truncate(छाँट कर छोटा करना) the file to a specific size we can use the truncate function
     '''
+
+with open('newFile.txt', 'w') as a:
+    a.write('Hello Ashu Maurya this is truncate file')
+
+    # define the size of file
+    a.truncate(5); '''by using this we can store only 5 character in inside the file'''
+
+with open('newFile.txt', 'r') as b:
+
+    # before truncate the file
+
+    # print(b.read()); '''Hello Ashu Maurya this is truncate file'''
+
+    # after truncate the file
+    print(b.read()); '''Hello'''
