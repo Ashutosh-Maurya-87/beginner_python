@@ -28,5 +28,7 @@ def func():
    global x 
    x=6
    print('value of x inside the function: ', x); '''6 bcz global change the value of global variable x'''
+
 func()
+
 print('value of x outside of the function: ', x);'''6  bcz global change the value of global variable x'''
