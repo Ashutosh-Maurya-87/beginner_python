@@ -7,7 +7,7 @@ for i in range(11):
 # Create a list:
 names = ["Ashu", "Ronny", "Herry"]
 
-# Print each name:
+# Print each name: using for loop
 for name in names:
     print(name)
 
