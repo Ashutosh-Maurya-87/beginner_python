@@ -20,6 +20,7 @@ print('dict get method',dict.get('name')); '''ashu'''
 # to access all keys, keys()
 print(dict.keys()); '''dict_keys(['name', 'age', 'class'])'''
 print(dict.values()); '''dict_values(['ashu', 23, 'BCA'])'''
+
 for key in dict.keys():
     print('key are', key); '''name   age   class'''
     print(dict[key]); '''ashu  23  BCA'''
