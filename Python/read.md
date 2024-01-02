@@ -1,3 +1,10 @@
+# Indentation ---------------------
+      Indentation refers to the spaces at the begining of a code line.
+      It is very important as Python uses indentation to indicate a block of code.
+      If the indentation is not correct we will endup with IndentationError error.
+
+
+
 print -> this is a function (predefined)
 input -> predefined function in python
 
