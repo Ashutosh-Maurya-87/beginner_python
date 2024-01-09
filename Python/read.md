@@ -5,8 +5,8 @@
 
 
 # Predefine Functions --------------
-   print -> this is a function (predefined)
-   input -> predefined function in python
+      print -> this is a function (predefined)
+      input -> predefined function in python
 
 def -> def keyword indecate we are defining a function
 
@@ -40,9 +40,9 @@ import function
  for i in range(10):
     print(f"The square of {i} is {function.square(i)}")
 
+# List ------------------
 
-'''
-what is list in python?
+      what is list in python?
 
 1. Lists are order collection of data items.
 2. This store multiple items in a single variable.
@@ -50,11 +50,11 @@ what is list in python?
 4. List are changable , means we can alter them after creation.
 5. List can store multiple data type ex. ['ashu', 23, True]
 
-Example: -
+       Example: -
 
-list = [1,2,3,4,5]
-print(list)
-'''
+           list = [1,2,3,4,5]
+            print(list)
+
 ################################################################
 '''
 Tuple: 
