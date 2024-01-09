@@ -17,7 +17,7 @@ with Python.
 #   myenv\Scripts\activate.bat
 
 '''
-Once the virtual envoirnment id activated any packages
+Once the virtual envoirnment is activated any packages
 that we installed pip will be installed in the virtual enviornment
 rather than in the global Python enviornment . This allows we
 to have separate set of packages for each project without affecting 
