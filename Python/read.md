@@ -56,31 +56,32 @@ import function
             print(list)
 
 ################################################################
-'''
-Tuple: 
-1.  Tuples are defined by enclosing the 
-    elements in parentheses (()) instead of square brackets ([]).
-2. Tuples are immutable means we can not alter them after creation
-3. Tuple are order collection of data item. This store multiple item in single variable
 
-ex-> 
+# Tuple-----------
+      1.  Tuples are defined by enclosing the 
+          elements in parentheses (()) instead of square brackets ([]).
+      2. Tuples are immutable means we can not alter them after creation
+      3. Tuple are order collection of data item. This store multiple item in single variable
 
-tuple = ('ashu',23,'BCA','Students')
-'''
+      Example-> 
+
+      tuple = ('ashu',23,'BCA','Students')
+      print(tuple)
+
 #############################################################
 '''
-Set
-Sets are used to store multiple items in a single variable.
+# Set -----------------
+      Sets are used to store multiple items in a single variable.
 
-Set is one of 4 built-in data types in Python used to store 
-collections of data, the other 3 are List, Tuple, and Dictionary, 
-all with different qualities and usage.
+      Set is one of 4 built-in data types in Python used to store 
+      collections of data, the other 3 are List, Tuple, and Dictionary, 
+      all with different qualities and usage.
 
-A set is a collection which is unordered, unchangeable*, and unindexed.
+      A set is a collection which is unordered, unchangeable*, and unindexed.
 
-Set do not contain duplicate item.
+      Set do not contain duplicate item.
 
-* Note: Set items are unchangeable, but we can remove items and add new items.
+     * Note: Set items are unchangeable, but we can remove items and add new items.
 
 '''
 
