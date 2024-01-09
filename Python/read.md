@@ -4,9 +4,9 @@
       If the indentation is not correct we will endup with IndentationError error.
 
 
-
-print -> this is a function (predefined)
-input -> predefined function in python
+# Predefine Functions --------------
+   print -> this is a function (predefined)
+   input -> predefined function in python
 
 def -> def keyword indecate we are defining a function
 
