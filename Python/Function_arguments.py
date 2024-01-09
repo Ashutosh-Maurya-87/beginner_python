@@ -31,7 +31,7 @@ average(6,4)
 
 '''here it takes number as an tuple'''
 def averageOfMoreNumber(*numbers):
-    # print(type(numbers))
+    # print(type(numbers)) 
     sum = 0
     for i in numbers:
         sum = sum + i
