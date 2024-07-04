@@ -57,6 +57,7 @@ def greet(fun):
 def hello():
     print('Hello this is From hello func')
 
+hello()
 # greet(hello)()
 '''
 output is
@@ -66,6 +67,36 @@ Hello this is From Ashu
 Thanks for using this function
 '''
 
+def myFunc(fn):
+    def myInnerFunc(*args, **kwargs):
+        # print(type(*args), type(**kwargs))
+        print('this is inner my finction', *args, **kwargs)
+        fn(*args, **kwargs)
+        print('this is print at the end of the function')
+    return myInnerFunc
+
+@myFunc
+def newFunc():
+    print('this print inside the newFunc')
+
+@myFunc
+def add(a,b):
+    print('sum of number is', a+b)
+# myFunc(newFunc)()
+
+newFunc()
+add(1,5)
+
+'''
+Output is ->
+
+this is inner my finction
+this print inside the newFunc
+this is print at the end of the function
+this is inner my finction 1 5
+sum of number is 6
+this is print at the end of the function
+'''
 
 
 

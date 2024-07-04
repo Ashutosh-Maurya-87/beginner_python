@@ -44,11 +44,11 @@ import function
 
       what is list in python?
 
-1. Lists are order collection of data items.
-2. This store multiple items in a single variable.
-3. List item are seprated by commas and enclose with [] bracket.
-4. List are changable , means we can alter them after creation.
-5. List can store multiple data type ex. ['ashu', 23, True]
+      1. Lists are order collection of data items.
+      2. This store multiple items in a single variable.
+      3. List item are seprated by commas and enclose with [] bracket.
+      4. List are changable , means we can alter them after creation.
+      5. List can store multiple data type ex. ['ashu', 23, True]
 
        Example: -
 

@@ -65,9 +65,45 @@ obj2.desc()
 
 
 
+'''
+Class Object variable -> we can call this as Static Variable
 
+Instance Object Variable -> Initially this vaiable is empty
 
+class object object is a instance variable 
+'''
 
+# Make Instance object variable
+
+class Test():
+    x = 7
+    def f1(self):
+        pass
+    @staticmethod
+    def f2():
+        print('Hello this is f2 function')
+    @classmethod
+    def f3(clsMthod):
+        print('clsMethod',clsMthod.x)
+
+t1 = Test()
+t2 = Test()
+Test.f3(9); '''class method function called'''
+t1.f1()
+Test.f2(); '''static method function called'''
+t1.f2()
+
+'''
+f1() -> is a instance Method
+
+instance method is called by instance object t1
+
+f2() -> is a static method
+
+f3() -> is a class method and clsMethod is a variable it can be any name
+we make this for specific task of class
+
+'''
 
 
 
