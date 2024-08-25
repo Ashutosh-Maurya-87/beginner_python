@@ -1,6 +1,8 @@
 # Class Variable -
-''' Class variable are defined at the class lavel and are shared among all the instances of the class.
-They are defined outside of any method and are usually used to store information that is common to all instance
+''' Class variable are defined at the class lavel 
+and are shared among all the instances of the class.
+They are defined outside of any method and are usually 
+used to store information that is common to all instance
 of the class.
 
 For example: A class variable can be used to store the number of instance of a class that have been created.
@@ -8,8 +10,10 @@ For example: A class variable can be used to store the number of instance of a c
 
 # Instance variable -
 '''
-Instance variable are defined at the instance level and are unique to each instance of the class.
-They are defined inside the init method and are usually used to store information that is specific to each instance of the class.
+Instance variable are defined at the instance level and 
+are unique to each instance of the class.
+They are defined inside the init method and are usually 
+used to store information that is specific to each instance of the class.
 For Example: -
   An instance variable can be used to store the name of an employee in a class that represent an employee
 '''

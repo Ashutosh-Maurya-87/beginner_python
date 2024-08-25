@@ -16,7 +16,7 @@ print('sort array', array)
 
 #creating a empty set in python
 s = set()
-# to add avalue in the set we use .add method and pass the value inside add
+# to add a value in the set we use .add method and pass the value inside add
 # and .add function take only one argument not two or more
 # s.add(1, 2) this give error but s.add(1) givs no error
 s.add(1)

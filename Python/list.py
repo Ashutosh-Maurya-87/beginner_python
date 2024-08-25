@@ -15,8 +15,10 @@ print(list)
 
 list_Of_Cid_team = ['ACP Parduman', 'Abhijeet', 'Daya','Shreya','Purvi','Pankaj','Tarika','Salunkhe','Fredicks','Sachin']
 
-print('if user give index in minus (-)', list_Of_Cid_team[-3]); ''' output is : Salunkhe'''
-print('if user give index in minus (-)',list_Of_Cid_team[len(list_Of_Cid_team) -3]); ''' output is: Daya '''
+print('if user give index in minus (-)', list_Of_Cid_team[-3]); 
+''' output is : Salunkhe'''
+print('if user give index in minus (-)',list_Of_Cid_team[len(list_Of_Cid_team) -3]); 
+''' output is: Daya '''
 
 # program to check 'Tarika' is in the cid list or not
 if 'Tarika' in list_Of_Cid_team:
