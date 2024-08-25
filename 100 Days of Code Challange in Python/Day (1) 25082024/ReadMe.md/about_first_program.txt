@@ -15,7 +15,9 @@ How to write multiline comment?
 what is indentation ?
  indentation is very important in python , because if any indentation is missing in any line of code then its 
   give the indentation error in our program.
-  
+  Python uses indentation for blocks, instead of curly braces. Both tabs and spaces are supported, 
+  but the standard indentation requires standard Python code to use four spaces.
+
 # Indentation ---------------------
       Indentation refers to the spaces at the begining of a code line.
       It is very important as Python uses indentation to indicate a block of code.
