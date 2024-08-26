@@ -50,4 +50,10 @@ Output:
 fter updation existing value, if exist then update it otherwise added it in the last {'name': 'Ashutosh', 'lastName': 'Maurya', 'age': 23}
 '''
 
+# if we want to clear dictionaries data then
+# we use clear() method
+print('after clear the dictionaries:',emptyDictionary.clear()); '''after clear the dictionaries: None'''
+emptyDictionary.clear()
+print('after clear method:', emptyDictionary); '''after clear method: {}'''
+
 # if we want
