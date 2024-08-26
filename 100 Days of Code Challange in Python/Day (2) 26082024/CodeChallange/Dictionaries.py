@@ -23,3 +23,31 @@ print(dict.values()); '''dict_values(['ashu', 'BCA', 'Ayodhya'])'''
 # dictionaries items() method, if we need to show key and value both the we use items() method
 ''' items() method print the all key value pair in the dictionaries'''
 print(dict.items()); '''dict_items([('name', 'ashu'), ('course', 'BCA'), ('Add', 'Ayodhya')])'''
+
+# Some more important method in Dictionaries
+
+# how to create a empty dictionaries
+emptyDictionary = {}
+print('Empty dectionaries', emptyDictionary); '''Empty dectionaries {}'''
+
+# if we want to update a dictionary
+# we use update() function
+emptyDictionary.update({
+    'name':'Ashu',
+    'lastName':'Maurya'
+})
+print('updated dictionaries', emptyDictionary); '''updated dictionaries {'name': 'Ashu', 'lastName': 'Maurya'}'''
+
+# if we want to modified existing value then also we use update() method
+emptyDictionary.update({
+    'name':'Ashutosh',
+    'age':23
+})
+print('after updation existing value, if exist then update it otherwise added it in the last',emptyDictionary)
+
+'''
+Output: 
+fter updation existing value, if exist then update it otherwise added it in the last {'name': 'Ashutosh', 'lastName': 'Maurya', 'age': 23}
+'''
+
+# if we want
