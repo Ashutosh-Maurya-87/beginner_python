@@ -56,4 +56,18 @@ print('after clear the dictionaries:',emptyDictionary.clear()); '''after clear t
 emptyDictionary.clear()
 print('after clear method:', emptyDictionary); '''after clear method: {}'''
 
-# if we want
+# if we want to delete any specific item from dictinaries
+# the we use pop() method, its accept a key name as a parameter
+newDict={
+    'id':123,
+    'name':'Aditya',
+    'Add':'heart',
+    'comedy':'Chin Tapak dum dum😊'
+}
+newDict.pop('id'); '''it remove that ecpecific item which key name we will provide'''
+print(newDict); '''{'name': 'Aditya', 'Add': 'heart', 'comedy': 'Chin Tapak dum dum😊'}'''
+
+# if we want to delete any key-value from the last then we use
+# popitem() method
+newDict.popitem(); ''' it don't expect any key name as a parameter'''
+print(newDict); '''{'name': 'Aditya', 'Add': 'heart'}'''
