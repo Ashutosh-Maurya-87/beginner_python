@@ -71,3 +71,17 @@ print(newDict); '''{'name': 'Aditya', 'Add': 'heart', 'comedy': 'Chin Tapak dum 
 # popitem() method
 newDict.popitem(); ''' it don't expect any key name as a parameter'''
 print(newDict); '''{'name': 'Aditya', 'Add': 'heart'}'''
+
+# if we want to delete dictionaries 
+# the we use del keyword, which delete the dictionaries from root
+del newDict
+print(newDict); 
+'''NameError: name 'newDict' is not defined,  its delete thid newDict dictionaries from root and show the name error'''
+
+# now if we want to update the newDict then we cant update because it is completely deleted
+# but in the clear() method we can update the dictionaries
+
+newDict.update({
+    'id':1
+})
+print(newDict); '''NameError: name 'newDict' is not defined'''
