@@ -1,3 +1,7 @@
+ PYTHON IS CASE SENSITIVE LANGUAGE
+ It considers that uppercase and lowercase characters are different. 
+ It is also applicable to identifiers.
+
 To Print anything in console
   we use print() function in python
   ex-  print('My Name is Ashutosh') // output : My Name is Ashutosh
