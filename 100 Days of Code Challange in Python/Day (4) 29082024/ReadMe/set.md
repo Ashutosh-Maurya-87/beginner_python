@@ -47,3 +47,14 @@ Set is collection of item and enclosed with curly braces {}.
 # issuperset(set1,set2..) method
 * it check if all the item of particular set is present in the original set, if present the it
   return true otherwise false
+
+# issubset(set) method
+* The issubset() method returns True if all items in the set are present in the specified set, otherwise FALSE.
+
+# add() method 
+* to add item in the set 
+* If we try to add an item that already exists in the set, the method does nothing.
+
+# remove(value) method
+* The remove() method removes a specified item from the set.
+* If specified item is not present in the set, the method raises KeyError.

@@ -91,3 +91,37 @@ print(city.issuperset(city2)); '''True'''
 city3 = {'ayodhya','lucknow','ghaziabad','noida'}
 print(city.issuperset(city3)); '''False'''
 
+# issubset(set1,set2...) method
+d = {'Ayodhya','Lucknow','Amh','ADI'}
+d2 = {'Lucknow','AYC','AMH','ADI'}
+print('issubset',d2.issubset(d)); '''False,  all item of set d2 is not present in the set d'''
+
+A = {1,2,3,4,5,6}
+B = {1,2,4,5,6}
+print(B.issubset(A)); '''True, because all item of set B is present in the set A'''
+print(A.issubset(B)); '''False, because all item of set A is not present in the B set'''
+
+# add() method
+A={12,23,12,3434,454,6}
+A.add(44444)
+print('after adding a value', A); 
+'''after adding a value {23, 454, 6, 44444, 3434, 12}, 
+it can add at any places in the set because we know this is unindexed'''
+
+# A tuple can be added in a set
+S = {'red', 'green', 'blue'}
+S.add((1, 2))
+print('after adding tuple',S)
+'''
+after adding tuple {'red', 'green', (1, 2), 'blue'}
+'''
+
+# But list can’t be a set item
+S = {'red', 'green', 'blue'}
+# S.add([1, 2]), this give errror
+'''Triggers TypeError: unhashable type: 'list'''
+
+# remove() method
+S1 = {'Lal','Hara','Neela','Peela'}
+S1.remove("Hara")
+print('after remove',S1); '''after remove {'Neela', 'Lal', 'Peela'}'''
