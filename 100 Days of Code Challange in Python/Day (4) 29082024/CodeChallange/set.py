@@ -64,3 +64,30 @@ s1 = {1,2,3,4,1,2,3,4,5,6,6,5}
 s2 = {1,3,4,5,6,2,3,2,5,6,3,4}
 s1.intersection_update(s2)
 print('intersection update method',s1); '''intersection update method {1, 2, 3, 4, 5, 6}, it modified the original set'''
+
+# symmetric_difference(set1,set2 is optional) method
+s = {'Ashu','Aadi','Dev','Aarush'}
+s1 = {'Aaruhi','Aranji','Adheera','Roohani'}
+print(s.symmetric_difference(s1)); 
+''' it print all the name because all name is not common in both set
+{'Adheera', 'Aaruhi', 'Roohani', 'Aadi', 'Ashu', 'Aranji', 'Aarush', 'Dev'}'''
+s1 = {'Aaruhi',"Ashu",'Aranji','Adheera','Roohani'}
+print(s.symmetric_difference(s1)); '''{'Dev', 'Aadi', 'Aranji', 'Roohani', 'Aaruhi', 'Aarush', 'Adheera'}''' 
+
+# symmetric_difference_update(set1,set2 is optional) method
+set12 = {'Ashu','Aadi','Dev','Aarush'}
+set123 = {'Aaruhi','Aranji','Adheera','Roohani'}
+set12.symmetric_difference_update(set123)
+print('symmetric difference update', set12); 
+'''
+its update the original set, set12
+symmetric difference update {'Adheera', 'Aaruhi', 'Aranji', 'Aarush', 'Ashu', 'Roohani', 'Dev', 'Aadi'}
+'''
+
+# issuperset(set1, set2...) method
+city = {'ayodhya','lucknow','ghaziabad'}
+city2 = {'ayodhya','lucknow','ghaziabad'}
+print(city.issuperset(city2)); '''True'''
+city3 = {'ayodhya','lucknow','ghaziabad','noida'}
+print(city.issuperset(city3)); '''False'''
+

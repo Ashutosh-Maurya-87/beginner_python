@@ -23,11 +23,27 @@ Set is collection of item and enclosed with curly braces {}.
 
   ############################
 * The union() methods joins all items from both sets, means it contains only that unique item which is present in both set and 
-update() methods joins all items from both sets, means it update the original set and join that. 
-The intersection() method keeps ONLY the duplicates, means it contains only that item which is present in both set. 
-The difference() method keeps the items from the first set that are not in the other set(s). 
-The symmetric_difference() method keeps all items EXCEPT the duplicates.
+
+# update() methods 
+* joins all items from both sets, means it update the original set and join that. 
+
+# The intersection(set1,set2...) method 
+* keeps ONLY the duplicates, means it contains only that item which is present in both set.
 
 # intersection_update(set1,set2...) method
  * set1 is required, set2 is optional
- The intersection_update() method updates the set by removing the items that are not common to all the specified sets.
+ * The intersection_update() method updates the set by removing the items that are not common to all the specified sets.
+
+# The difference() method 
+* keeps the items from the first set that are not in the other set(s). 
+
+# The symmetric_difference(set1,set2...) method 
+ * keeps all items EXCEPT the duplicates.
+ * Means it give the uncommon value which not present in both set
+
+# symmetric_difference_update(set1,set2...) method
+* same as symmetric_difference() method but it update the original set
+
+# issuperset(set1,set2..) method
+* it check if all the item of particular set is present in the original set, if present the it
+  return true otherwise false
