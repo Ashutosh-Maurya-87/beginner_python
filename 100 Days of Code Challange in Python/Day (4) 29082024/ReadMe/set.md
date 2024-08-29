@@ -5,6 +5,8 @@ what is set in python?
   collections of data, the other 3 are List, Tuple, and Dictionary, 
   all with different qualities and usage.
 
+Set is collection of item and enclosed with curly braces {}.
+
    Set do not maintain the order of element. 
    Set are also used to store multiple item in a single variable.
 
