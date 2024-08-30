@@ -140,3 +140,14 @@ print('pop method',city.pop()); '''pop method ayodhya,  because it remove random
 x = city.pop()
 print(x); '''ayodhya, can me any value'''
 print(city); '''{'ayodhya', 'Agartala'}, can be any item in the set, don't get confused'''
+
+
+# del method to delete entire the set
+cities = {'India', 'Bharat'}
+# del cities
+print(cities); '''NameError: name 'cities' is not defined'''
+
+# clear() method
+cities = {'India', 'Bharat'}
+
+print('clear',cities.clear()); '''None'''

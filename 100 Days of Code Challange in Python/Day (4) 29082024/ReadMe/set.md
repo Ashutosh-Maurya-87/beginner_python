@@ -67,3 +67,9 @@ Set is collection of item and enclosed with curly braces {}.
 # pop() method
 * The pop() method removes random item from a set and returns it. If the set is empty, the method raises KeyError.
 * if we want to remove any specific item then we use remove() or discard() method
+
+# del method
+* it deleted the entire set and if we print that set then it give Name error
+
+# clear() method
+* it clear all the item from the set  and after print that set it give None
