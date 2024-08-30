@@ -58,3 +58,12 @@ Set is collection of item and enclosed with curly braces {}.
 # remove(value) method
 * The remove() method removes a specified item from the set.
 * If specified item is not present in the set, the method raises KeyError.
+
+# discard(value) method
+* It also remove the given item from the set , but main difference is that
+  if that given value is not present then remove() method give error
+  but discard() method does not give error
+
+# pop() method
+* The pop() method removes random item from a set and returns it. If the set is empty, the method raises KeyError.
+* if we want to remove any specific item then we use remove() or discard() method

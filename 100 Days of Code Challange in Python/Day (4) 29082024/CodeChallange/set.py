@@ -125,3 +125,18 @@ S = {'red', 'green', 'blue'}
 S1 = {'Lal','Hara','Neela','Peela'}
 S1.remove("Hara")
 print('after remove',S1); '''after remove {'Neela', 'Lal', 'Peela'}'''
+
+# discard() method
+S1 = {'Lal','Hara','Neela','Peela'}
+S1.discard('Blue')
+print('discard method',S1); '''discard method {'Lal', 'Hara', 'Neela', 'Peela'}, it not give error '''
+# S1.remove('Blue')
+print(S1); '''KeyError: 'Blue', remove method give key error '''
+
+
+# pop() method
+city = {'ayodhya','lucknow','ghaziabad','Agartala'}
+print('pop method',city.pop()); '''pop method ayodhya,  because it remove random item, so that can be from first or last or any other places'''
+x = city.pop()
+print(x); '''ayodhya, can me any value'''
+print(city); '''{'ayodhya', 'Agartala'}, can be any item in the set, don't get confused'''
