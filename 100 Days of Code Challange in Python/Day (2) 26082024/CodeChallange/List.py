@@ -49,4 +49,8 @@ else :
 ''' output is:  No, because python is case sensitive language'''
 # now how we can update a list
 
+list = [1,2,3,4,5]
+list[1] = 'ashu'
+print(list); '''[1, 'ashu', 3, 4, 5]'''
+
 
