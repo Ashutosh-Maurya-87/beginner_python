@@ -20,6 +20,7 @@ ex- if we give -2 index number then we count from back of the list and start wit
 '''
 print(listOfComedian[-2]); '''Kachra seth'''
 
+# LIST SLICING
 # if we want to print list the we can write also this
 print(listOfComedian[:]); '''['Tiwari', 'Baburao', 'Raju', 'Shyam', 'Kachra Seth', 'Devi Parshad']'''
 
