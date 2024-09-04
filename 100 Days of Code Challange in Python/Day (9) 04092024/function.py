@@ -30,7 +30,7 @@ function with default arguments 11
 function with default arguments 30
 '''
 
-# Required Arguments in Funtion
+# Required length Arguments in Funtion
 def avg(a,b,c) :
     print('average is:',(a+b+c)/3)
 
@@ -48,3 +48,11 @@ def AvgOfMoreNUmber(*num) :
     print('average of numbers is:', sum/len(num))
 
 AvgOfMoreNUmber(1,2,3,4,5,6,7,8,9,10); '''average of numbers is: 5.5'''
+
+# Keywords arguments function
+def keyWordArgumentFunction(name1,name2,name3) :
+    print('keyword argument function', name1, name2, name3)
+
+# This way the order of the arguments does not matter.
+keyWordArgumentFunction(name1 = 'Ashutosh', name2='Aadi', name3='Ranji'); '''keyword argument function Ashutosh Aadi Ranji'''
+keyWordArgumentFunction(name2='ashu',name1='ashutosh',name3='ashutosh maurya'); '''keyword argument function ashutosh ashu ashutosh maurya'''
