@@ -6,3 +6,6 @@
 # Difference between docString and comment
 * if we write anything in inside the comma (''') just after the function definition then that is docstring
 * if we write anythin inside the comma ('''), but not just after the function definition then that is comment
+
+* Comments are descriptions that helps programmers to better understant the functionalities of the program
+* They are completely ignored by python interpreter
