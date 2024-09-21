@@ -48,7 +48,7 @@ class Details:
     def desc(self):
         print('My name is ', self.name, 'and i am a', self.occupation); 
         '''My name is  Ashutosh and i am a Software developer
-        My name is  Khargosh and i am a Eat Carrot
+        My name is  Khargosh and i  Eat Carrot
         '''
 
 
@@ -68,7 +68,7 @@ obj2.desc()
 '''
 Class Object variable -> we can call this as Static Variable
 
-Instance Object Variable -> Initially this vaiable is empty
+Instance Object Variable -> Initially this variable is empty
 
 class object object is a instance variable 
 '''
