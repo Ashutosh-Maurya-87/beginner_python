@@ -37,6 +37,8 @@ class studentDetails:
     name = 'Aadi'
     gender = 'male'
     hobbies = 'Cricket and Riding'
+
+    '''constructor'''
     def __init__(self,name,gender,hobbies,age,address):
         '''these are instance varibales'''
         self.name = name
@@ -76,6 +78,7 @@ class variable student details Cricket and Riding
 
 class test:
     num = 5
+    '''instance method'''
     def add(self,a,b):
         self.a=a
         self.b=b
@@ -83,7 +86,11 @@ class test:
         return sum
     
 t = test()
+
+'''instance method caling '''
 print('t value',t.add(2,5)); '''t value 7'''
+
+
 print('valkue of a is', t.a)
 print('valkue of a is', t.b)
 '''
@@ -92,3 +99,7 @@ valkue of a is 5
 '''
 # by using class name we can access the class variables
 print('class variables value is', test.num); '''class variables value is 5'''
+
+# Modify class variables
+test.num = 78
+print('modified value of class variables:', test.num); '''modified value of class variables: 78'''

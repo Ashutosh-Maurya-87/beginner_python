@@ -13,3 +13,20 @@
 variable that belongs to the class
 
 It must be provied as the extra parameter inside the method defination
+
+
+# Class Attributes
+* When we design a class, we use instance variables and class variables.
+
+# Tow type of class attributes
+* Class Variables
+* Instance Variables
+
+# Class Variables
+* A class variable is a variable that is declared inside of class, but outside of any instance method or __init__() method.
+
+# Instance Variables
+* The instance variables are attributes attached to an instance of a class. We define instance variables in the constructor ( the __init__() method of a class).
+
+# CONSTRUCTOR
+* Constructors in Python is a special class method for creating and initializing an object instance at that class. Every Python class has a constructor; it's not required to be defined explicitly. The purpose of the constructor is to construct an object and assign a value to the object's members.
