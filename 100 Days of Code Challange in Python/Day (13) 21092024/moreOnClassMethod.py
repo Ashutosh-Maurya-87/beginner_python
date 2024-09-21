@@ -95,3 +95,8 @@ Aarush Kumar
 33
 22-11-2022
 '''
+
+# How we can delete any object 
+# we use del keyword to delete any object
+# del e
+print(e.name); '''NameError: name 'e' is not defined'''
