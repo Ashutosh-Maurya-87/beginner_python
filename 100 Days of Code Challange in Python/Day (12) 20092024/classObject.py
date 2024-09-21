@@ -1,8 +1,8 @@
 
 class firstClass:
     firstname = 'Ashu'
-    age:24
-    add:'ar'
+    age=24
+    add='arr name'
 
 obj = firstClass()
 print('bject is', obj); '''bject is <__main__.firstClass object at 0x000002191B94E7D0>'''
