@@ -1,5 +1,6 @@
 # What is Constructor
 * Constructor is a special method used to create and initialize the object of a class.
+* The task of the constructor is to assign value to data members when an object of the class is created.
 1. Constructor is excuted automatically when the object is created
 2. For example, when we execute obj = Sample(), Python gets to know that obj is an object of class Sample and calls the constructor of that class to create an object.
 
@@ -39,3 +40,20 @@ This constructor doesn’t accept the arguments during object creation. Instead,
 # Parameterized Constructor
 A constructor with defined parameters or arguments is called a parameterized constructor. We can pass different values to each object at the time of creation using a parameterized constructor.
 * example: ->  def __init__(self, value1, value2.value3 ...):
+
+
+# Constructor Overloading
+* Constructor overloading is that when more than one constructor is present in the one class/
+* Then Python consider only last of the constructor. 
+* But Python does not support the constructor overloading
+
+* We use constructor channing to solve the overloading constructor problem
+
+# Consturctor Channing
+* Constructor chaining is the process of calling one constructor from another constructor. 
+* Constructor chaining is useful when you want to invoke multiple constructors, one after another, by initializing only one instance.
+
+1. In Python, constructor chaining is convenient when we are dealing with inheritance. 
+2. When an instance of a child class is initialized, the constructors of all the parent classes are first invoked and then, in the end, the constructor of the child class is invoked.
+
+* Using the super() method we can invoke the parent class constructor from a child class.
