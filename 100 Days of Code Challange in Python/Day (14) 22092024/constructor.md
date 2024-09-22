@@ -57,3 +57,7 @@ A constructor with defined parameters or arguments is called a parameterized con
 2. When an instance of a child class is initialized, the constructors of all the parent classes are first invoked and then, in the end, the constructor of the child class is invoked.
 
 * Using the super() method we can invoke the parent class constructor from a child class.
+
+# Note
+* If the parent class doesn’t have a default constructor, then the compiler would not insert a default constructor in the child class.
+* A child class constructor can also invoke the parent class constructor using the super() method.
