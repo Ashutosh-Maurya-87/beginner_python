@@ -1,6 +1,19 @@
+from pydantic import BaseModel
 from fastapi import FastAPI
 
 app = FastAPI()
+
+
+class Product(BaseModel):
+    name: str
+    price: int
+    category: str
+
+
+class User(BaseModel):
+    name: str
+    age: int
+    address: str
 
 
 @app.get("/")
@@ -29,6 +42,21 @@ def get_prdoucts(category_id: str | None = None, limit: int = 10, page: int = 1)
 
     result = products[start:end]
     return {"data": result, "limit": limit, "page": page}
+
+
+@app.post("/products")
+def create_product(products: Product):
+    return {"name": products.name, "price": products.price}
+
+
+@app.post("/users")
+def create_user(user: User):
+    return {
+        "message": "User created successfully",
+        "name": user.name,
+        "age": user.age,
+        "address": user.address,
+    }
 
 
 # @app.get("/products/{product_id}")
