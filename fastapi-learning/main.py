@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from fastapi import FastAPI
+from pydantic import Field
 
 app = FastAPI()
 
@@ -12,13 +13,14 @@ class Product(BaseModel):
 
 class User(BaseModel):
     name: str
-    age: int
+    # age: int = Field(gt=0, lt=120)   # gt -> greater than, lt -> less than
+    age: int = Field(ge=18, le=60)   # ge -> greater than equal to, le -> less than equal to
     address: str
 
 
 @app.get("/")
 def users():
-    return {"users": [{"id": 1, "name": "John"}, {"id": 2, "name": "Alice"}]}
+    return {"users": [{"id": 1, "name": "Ashutosh"}, {"id": 2, "name": "Alisha"}]}
 
 
 products = [
