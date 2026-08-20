@@ -6,6 +6,7 @@ app = FastAPI()
 
 
 class Product(BaseModel):
+    id: int
     name: str
     price: int
     category: str
@@ -14,7 +15,9 @@ class Product(BaseModel):
 class User(BaseModel):
     name: str
     # age: int = Field(gt=0, lt=120)   # gt -> greater than, lt -> less than
-    age: int = Field(ge=18, le=60)   # ge -> greater than equal to, le -> less than equal to
+    age: int = Field(
+        ge=18, le=60
+    )  # ge -> greater than equal to, le -> less than equal to
     address: str
 
 
@@ -46,9 +49,10 @@ def get_prdoucts(category_id: str | None = None, limit: int = 10, page: int = 1)
     return {"data": result, "limit": limit, "page": page}
 
 
+# Add Product
 @app.post("/products")
-def create_product(products: Product):
-    return {"name": products.name, "price": products.price}
+def create_product(product: Product):
+    return products.append({"id": product.id, "name": product.name, "price": product.price})
 
 
 @app.post("/users")
@@ -59,6 +63,16 @@ def create_user(user: User):
         "age": user.age,
         "address": user.address,
     }
+
+
+# getting product by id
+@app.get("/products/{id}")
+def get_product_by_id(id: int):
+    for product in products:
+        if product["id"] == id:
+            return product
+
+    return "Product Not Found or Id is not exist"
 
 
 # @app.get("/products/{product_id}")
