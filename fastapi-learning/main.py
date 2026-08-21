@@ -52,7 +52,9 @@ def get_prdoucts(category_id: str | None = None, limit: int = 10, page: int = 1)
 # Add Product
 @app.post("/products")
 def create_product(product: Product):
-    return products.append({"id": product.id, "name": product.name, "price": product.price})
+    return products.append(
+        {"id": product.id, "name": product.name, "price": product.price}
+    )
 
 
 @app.post("/users")
@@ -71,8 +73,18 @@ def get_product_by_id(id: int):
     for product in products:
         if product["id"] == id:
             return product
-
     return "Product Not Found or Id is not exist"
+
+
+# updating product by id
+@app.put("/products")
+def update_product_by_id(id: int, product: Product):
+    for i in range(len(products)):
+        print("---", products[i], i, products[i]["id"])
+        if products[i]["id"] == id:
+            products[i] = product
+            return "Product updated successfully"
+    return "No Product Found"
 
 
 # @app.get("/products/{product_id}")
