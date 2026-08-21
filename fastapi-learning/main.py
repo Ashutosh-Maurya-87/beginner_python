@@ -87,6 +87,16 @@ def update_product_by_id(id: int, product: Product):
     return "No Product Found"
 
 
+# delete the product by id
+@app.delete("/products")
+def delete_product_by_id(id: int):
+    for i in range(len(products)):
+        if products[i]["id"] == id:
+            del products[i]
+            return "Product deleted successfully"
+    return "No prduct found"
+
+
 # @app.get("/products/{product_id}")
 # def get_product(product_id: int):
 
