@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import Field
 
 app = FastAPI()
@@ -52,9 +52,11 @@ def get_prdoucts(category_id: str | None = None, limit: int = 10, page: int = 1)
 # Add Product
 @app.post("/products")
 def create_product(product: Product):
-    return products.append(
-        {"id": product.id, "name": product.name, "price": product.price}
-    )
+
+    newProduct = {"id": product.id, "name": product.name, "price": product.price}
+
+    products.append(newProduct)
+    return {"message": "Product Created Successfully", "product": newProduct}
 
 
 @app.post("/users")
@@ -108,3 +110,33 @@ def delete_product_by_id(id: int):
 #     for item in products:
 #         if item["id"] == product_id:
 #             return item
+
+
+# TEST--
+productsList = [
+    {"id": 1, "name": "Laptop"},
+    {"id": 2, "name": "Mobile"},
+    {"id": 3, "name": "Keyboard"},
+]
+
+
+def findAll():
+    for product in productsList:
+        print(product)
+
+
+def findProductById():
+    for i in range(len(productsList)):
+        if productsList[i]["id"] == 2:
+            print(productsList)
+        return "Product Not found"
+
+
+# HTTPException and 404 Errors
+@app.get("/get-product-by-id")
+def get_product_by_id(id: int):
+    for prod in products:
+        if prod["id"] == id:
+            return prod
+
+    raise HTTPException(status_code=404, detail="Prdocut not found")
