@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 from fastapi import APIRouter, HTTPException
 
-router = APIRouter()
+router = APIRouter(prefix="/products", tags=["Products"])
 
 productsData = [
     {"id": 1, "name": "Laptop 1", "price": 50000},
@@ -24,7 +24,7 @@ class Product(BaseModel):
     category: str
 
 
-@router.get("/products")
+@router.get("/all_product")
 def get_prdoucts(category_id: str | None = None, limit: int = 10, page: int = 1):
     start = (page - 1) * limit
     end = start + limit
@@ -34,7 +34,7 @@ def get_prdoucts(category_id: str | None = None, limit: int = 10, page: int = 1)
 
 
 # Add Product
-@router.post("/products")
+@router.post("/create_product")
 def create_product(product: Product):
 
     newProduct = {"id": product.id, "name": product.name, "price": product.price}
@@ -42,18 +42,8 @@ def create_product(product: Product):
     productsData.append(newProduct)
     return {"message": "Product Created Successfully", "product": newProduct}
 
-
-# getting product by id
-@router.get("/products/{id}")
-def get_product_by_id(id: int):
-    for product in productsData:
-        if product["id"] == id:
-            return product
-    return "Product Not Found or Id is not exist"
-
-
 # updating product by id
-@router.put("/products")
+@router.put("/update_product")
 def update_product_by_id(id: int, product: Product):
     for i in range(len(productsData)):
         print("---", productsData[i], i, productsData[i]["id"])
@@ -64,7 +54,7 @@ def update_product_by_id(id: int, product: Product):
 
 
 # delete the product by id
-@router.delete("/products")
+@router.delete("/delete_product/{id}")
 def delete_product_by_id(id: int):
     for i in range(len(productsData)):
         if productsData[i]["id"] == id:
@@ -94,6 +84,7 @@ def findProductById():
 
 
 # HTTPException and 404 Errors
+# /get-product-by-id?id=2  this is a query parameter
 @router.get("/get-product-by-id")
 def get_product_by_id(id: int):
     for prod in productsData:
