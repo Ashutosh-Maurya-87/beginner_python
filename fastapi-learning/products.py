@@ -24,6 +24,12 @@ class Product(BaseModel):
     category: str
 
 
+class ProductUpdate(BaseModel):
+    name: str | None = None
+    price: int | None = None
+    category: str | None = None
+
+
 @router.get("/all_product")
 def get_prdoucts(category_id: str | None = None, limit: int = 10, page: int = 1):
     start = (page - 1) * limit
@@ -42,6 +48,7 @@ def create_product(product: Product):
     productsData.append(newProduct)
     return {"message": "Product Created Successfully", "product": newProduct}
 
+
 # updating product by id
 @router.put("/update_product")
 def update_product_by_id(id: int, product: Product):
@@ -51,6 +58,20 @@ def update_product_by_id(id: int, product: Product):
             productsData[i] = product
             return "Product updated successfully"
     return "No Product Found"
+
+
+# updating only one thing in the api
+@router.patch("/update_product_partially")
+def update_product_partially(id: int, prod: ProductUpdate):
+    for i in range(len(productsData)):
+        if productsData[i]["id"] == id:
+            update_data = prod.model_dump(exclude_unset=True)
+            productsData[i].update(update_data)
+            return {
+                "message": "Product updated successfully",
+                "product": productsData[i],
+            }
+    raise HTTPException(status_code=404, detail="Product Not found")
 
 
 # delete the product by id
