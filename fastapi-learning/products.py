@@ -4,20 +4,20 @@ from fastapi import APIRouter, HTTPException
 router = APIRouter(prefix="/products", tags=["Products"])
 
 productsData = [
-    {"id": 1, "name": "Laptop 1", "price": 50000},
-    {"id": 2, "name": "Laptop 2", "price": 51000},
-    {"id": 3, "name": "Laptop 3", "price": 52000},
-    {"id": 4, "name": "Laptop 4", "price": 53000},
-    {"id": 5, "name": "Laptop 5", "price": 54000},
-    {"id": 6, "name": "Laptop 6", "price": 55000},
-    {"id": 7, "name": "Laptop 7", "price": 56000},
-    {"id": 8, "name": "Laptop 8", "price": 57000},
-    {"id": 9, "name": "Laptop 9", "price": 58000},
-    {"id": 10, "name": "Laptop 10", "price": 59000},
+    {"id": 1, "name": "Laptop 1", "price": 50000, "category": "electronic 1"},
+    {"id": 2, "name": "Laptop 2", "price": 51000, "category": "electronic 2"},
+    {"id": 3, "name": "Laptop 3", "price": 52000, "category": "electronic 3"},
+    {"id": 4, "name": "Laptop 4", "price": 53000, "category": "electronic 4"},
+    {"id": 5, "name": "Laptop 5", "price": 54000, "category": "electronic 5"},
+    {"id": 6, "name": "Laptop 6", "price": 55000, "category": "electronic 6"},
+    {"id": 7, "name": "Laptop 7", "price": 56000, "category": "electronic 7"},
+    {"id": 8, "name": "Laptop 8", "price": 57000, "category": "electronic 8"},
+    {"id": 9, "name": "Laptop 9", "price": 58000, "category": "electronic 9"},
+    {"id": 10, "name": "Laptop 10", "price": 59000, "category": "electronic 10"},
 ]
 
 
-class Product(BaseModel):
+class ProductCreate(BaseModel):
     id: int
     name: str
     price: int
@@ -28,6 +28,13 @@ class ProductUpdate(BaseModel):
     name: str | None = None
     price: int | None = None
     category: str | None = None
+
+
+class ProductResponse(BaseModel):
+    id: int
+    name: str
+    price: int
+    category: str
 
 
 @router.get("/all_product")
@@ -41,7 +48,7 @@ def get_prdoucts(category_id: str | None = None, limit: int = 10, page: int = 1)
 
 # Add Product
 @router.post("/create_product")
-def create_product(product: Product):
+def create_product(product: ProductCreate):
 
     newProduct = {"id": product.id, "name": product.name, "price": product.price}
 
@@ -51,7 +58,7 @@ def create_product(product: Product):
 
 # updating product by id
 @router.put("/update_product")
-def update_product_by_id(id: int, product: Product):
+def update_product_by_id(id: int, product: ProductCreate):
     for i in range(len(productsData)):
         print("---", productsData[i], i, productsData[i]["id"])
         if productsData[i]["id"] == id:
@@ -106,7 +113,7 @@ def findProductById():
 
 # HTTPException and 404 Errors
 # /get-product-by-id?id=2  this is a query parameter
-@router.get("/get-product-by-id")
+@router.get("/get-product-by-id", response_model=ProductResponse)
 def get_product_by_id(id: int):
     for prod in productsData:
         if prod["id"] == id:
